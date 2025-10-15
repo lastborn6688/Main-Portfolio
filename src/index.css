@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+
+/* Create your custom class */
+.cormorant-font {
+  font-family: "Cormorant", serif;
+}
+.source-serif-4- {
+  font-family: "Source Serif 4", serif;
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.orbit-text {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
