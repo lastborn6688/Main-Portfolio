@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import ScrollingText from "./components/ScrollingText";
+import Skills from "./components/Skills";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       </a>
       <Hero />
       <About />
+      <Skills/>
     </main>
   );
 };
