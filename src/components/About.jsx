@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="About"
-      className="lg:h-[90vh] h-fit  flex flex-col justify-start items-start text-white text-start lg:mx-20 mx-5 px-4 mt-20"
+      className="lg:h-[90vh] h-fit  flex flex-col justify-start items-start text-white text-start lg:mx-20 mx-5 px-4 mt-20 md:mt24"
     ><div className="w-full flex flex-col items-start">
       <h1 className="text-[18px] Merriweather">{"<This is me />"}</h1>
       <hr className="border-0 animation from-white via-blue-400 to-pink-600 bg-gradient-to-r rounded-full h-[2px] my-0 lg:mt-4 w-full opacity-60" />

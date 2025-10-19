@@ -4,6 +4,7 @@ import mongodb from "../images/mongodb.png";
 import postman from "../images/postman.png";
 import nodejs from "../images/nodejs.png";
 import nextjs from "../images/nextjs.png";
+import vercel from "../images/vercel.png";
 import { color } from "framer-motion";
 
 const Skills = () => {
@@ -83,6 +84,13 @@ const Skills = () => {
         proficiency: 80,
         color: "from-red-500 to-red-700",
       },
+      {
+        id: 15,
+        name: "Vercel",
+        image: vercel,
+        proficiency: 80,
+        color: "from-black to-gray-600",
+      }
     ],
     design: [
       {
@@ -93,7 +101,9 @@ const Skills = () => {
         proficiency: 75,
         color: "from-purple-400 to-pink-500",
       },
-      {
+    ],
+    learning: [
+            {
         id: 10,
         name: "Framer Motion",
         image:
@@ -101,8 +111,6 @@ const Skills = () => {
         proficiency: 70,
         color: "from-pink-500 to-purple-600",
       },
-    ],
-    learning: [
       {
         id: 11,
         name: "MOngodb",
@@ -152,7 +160,7 @@ const Skills = () => {
   return (
     <section
       id="Skills"
-      className="lg:mx-20 mx-5 mt-20 flex flex-col items-center"
+      className="lg:mx-20 mx-5 mt-10 flex flex-col items-center"
     >
       {/* Header with gradient animation */}
       <div className="text-center mb-12">
