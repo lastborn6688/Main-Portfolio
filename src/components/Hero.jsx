@@ -38,7 +38,7 @@ const Hero = () => {
           className="object-cover h-full w-full object-top"
         />
       </div>
-      <style jsx>{`
+      <style>{`
       .gradient-animate{
       background-size: 200% 200%;
       animation: gradient 3s ease infinite;

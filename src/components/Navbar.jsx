@@ -9,8 +9,8 @@ const Navbar = () => {
     "Home",
     "About",
     "Skills",
-    "Education",
     "Experience",
+    "Projects",
     "Contact",
   ];
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <button className="text-lg Merriweather text-blue-100 border-blue-300  border-2 hover:border-gray-200 cursor-pointer px-5 py-2 font-medium rounded-full">
+      <button className="text-lg Merriweather text-blue-100 border-blue-300 hover:bg-[rgb(30,48,99)]  border-2 hover:border-gray-200 cursor-pointer px-5 py-2 font-medium rounded-full">
         Resume
       </button>
     </nav>

@@ -1,13 +1,28 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import tailwind from "../images/tailwindcss.png";
 import mongodb from "../images/mongodb.png";
 import postman from "../images/postman.png";
 import nodejs from "../images/nodejs.png";
 import nextjs from "../images/nextjs.png";
 import vercel from "../images/vercel.png";
-import { color } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FaAsterisk } from "react-icons/fa";
 
 const Skills = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.2, // how much of the section must be visible
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [controls, inView]);
+
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
@@ -52,12 +67,13 @@ const Skills = () => {
         proficiency: 86,
         color: "from-teal-400 to-cyan-500",
       },
-      {id:14,
+      {
+        id: 14,
         name: "Next.js",
         image: nextjs,
         proficiency: 78,
         color: "from-gray-400 to-black",
-      }
+      },
     ],
     tools: [
       {
@@ -90,7 +106,7 @@ const Skills = () => {
         image: vercel,
         proficiency: 80,
         color: "from-black to-gray-600",
-      }
+      },
     ],
     design: [
       {
@@ -103,17 +119,17 @@ const Skills = () => {
       },
     ],
     learning: [
-            {
+      {
         id: 10,
         name: "Framer Motion",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
         proficiency: 70,
-        color: "from-pink-500 to-purple-600",
+        color: "from-gray-100 to-black",
       },
       {
         id: 11,
-        name: "MOngodb",
+        name: "MongoDB",
         image: mongodb,
         proficiency: 60,
         color: "from-green-400 to-green-600",
@@ -149,7 +165,7 @@ const Skills = () => {
         ...techCategories.frontend,
         ...techCategories.tools,
         ...techCategories.design,
-        ...techCategories.learning, 
+        ...techCategories.learning,
       ];
     }
     return techCategories[activeCategory] || [];
@@ -158,13 +174,18 @@ const Skills = () => {
   const filteredTech = getFilteredTech();
 
   return (
-    <section
+    <motion.section
       id="Skills"
-      className="lg:mx-20 mx-5 mt-10 flex flex-col items-center"
+      className="lg:mx-20 mx-5 mt-10 flex flex-col items-start"
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      {/* Header with gradient animation */}
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-blue-600  Merriweather">
+      {/* Header */}
+      <div className="text-start mb-12">
+        <h1 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r underline from-gray-200 to-blue-600 Merriweather flex gap-3">
+          <FaAsterisk className="text-2xl mt-2 animate-spin text-gray-400 [animation-duration:4s]" />
           My Stack
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto Merriweather">
@@ -200,7 +221,7 @@ const Skills = () => {
             className="relative group"
           >
             <div className="flex flex-col items-center justify-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:scale-105 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/10 cursor-pointer">
-              {/* Glow effect on hover - reduced */}
+              {/* Glow effect */}
               <div
                 className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 bg-gradient-to-r ${tech.color} blur-lg -z-10`}
               ></div>
@@ -219,7 +240,7 @@ const Skills = () => {
                 {tech.name}
               </p>
 
-              {/* Proficiency Bar */}
+              {/* Progress Bar */}
               <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
                 <div
                   className={`h-full bg-gradient-to-r ${tech.color} transition-all duration-1000 ease-out`}
@@ -230,7 +251,7 @@ const Skills = () => {
                 ></div>
               </div>
 
-              {/* Proficiency Percentage */}
+              {/* Tooltip */}
               {hoveredSkill === tech.id && (
                 <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-xs font-semibold shadow-lg animate-fade-in">
                   {tech.proficiency}% Proficient
@@ -243,21 +264,6 @@ const Skills = () => {
       </div>
 
       <style jsx>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
         @keyframes fade-in {
           from {
             opacity: 0;
@@ -272,7 +278,7 @@ const Skills = () => {
           animation: fade-in 0.2s ease-out;
         }
       `}</style>
-    </section>
+    </motion.section>
   );
 };
 
