@@ -38,7 +38,7 @@ const Experience = () => {
           Frontend Developer {"(Intern)"}
         </h3>
         <p className="text-gray-400 mb-2 Merriweather text-2xl mt-0 md:mt-5">
-          July 2025 - September 2025
+          July 2025 - December 2025
         </p>
       </div>
     </motion.section>

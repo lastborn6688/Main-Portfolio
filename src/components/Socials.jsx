@@ -11,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const Socials = () => {
   return (
     <section className="fixed bottom-[20rem] right-0 origin-bottom-right text-2xl h-20 md:mr-5 mr-0 w-auto gap-6 flex flex-col">
-      <a href="https://www.tiktok.com/@thelastborn004?_t=ZS-90gv3wUUpHt&_r=1">
+      <a href="https://www.tiktok.com/@ogalastborn09?_r=1&_t=ZS-92CRPeRh1Wi">
         <FaTiktok className="hover:scale-105 animate-bounce hover:text-black hover:bg-white text-white hover:transition-transform" />
       </a>
       <a
@@ -21,7 +21,7 @@ const Socials = () => {
         <FaWhatsapp />
       </a>
       <a
-        href=""
+        href="https://x.com/lastborn1869998?s=11"
         className="hover:scale-105 animate-bounce hover:bg-white hover:text-black text-white hover:transition-transform"
       >
         <FaXTwitter />

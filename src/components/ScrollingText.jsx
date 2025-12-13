@@ -2,7 +2,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 
 const ScrollingText = () => {
-    const text = "I appreciate you taking the time to explore my portfolio. I look forward to the opportunity to create, collaborate, and make an impact together"
+    const text = "I appreciate you taking the time to explore my portfolio. I look forward to the opportunity to create, collaborate, and make an impact together with you."
   return (
 <div className="overflow-hidden hidden md:block whitespace-nowrap bg-none text-white py-3">
         <motion.div

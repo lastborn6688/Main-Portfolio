@@ -1,28 +1,22 @@
 import React from "react";
-import Hero from "./Hero";
-import { Link } from "react-scroll";
+import { FaRegArrowAltCircleUp } from "react-icons/fa";
 
 const Footer = () => {
-  const links = ["Home", "About", "Contact",
+  const year = new Date().getFullYear();
 
-  ];
   return (
-    <div className="bg-[rgb(7,14,38)] lg:mx-20 mx-5">
-      <div>
-        <ul className="hidden md:flex md:flex-col  space-x-8 text-white w-[200px] gap-6">
-          {links.map((i) => (
-            <li
-              key={i}
-              className="text-lg font-medium hover:underline Merriweather cursor-pointer"
-            >
-              <Link to={i} smooth={true} duration={800} offset={-80}>
-                {i}
-              </Link>
-            </li>
-          ))}
-        </ul>
+    <>
+      <div className="lg:mx-20 mx-5 py-6 ">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex justify-center items-center mb-4 mx-auto">
+          <FaRegArrowAltCircleUp className="text-blue-300 animate-bounce cursor-pointer" size={35}/>
+        </button>
+        <div className="flex justify-center items-center">
+          <p className="text-sm text-gray-400 text-center">
+            © {year}. All rights reserved. Built with React.
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
