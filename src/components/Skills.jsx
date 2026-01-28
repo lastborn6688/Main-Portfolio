@@ -201,7 +201,7 @@ const Skills = () => {
             onClick={() => setActiveCategory(category.id)}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               activeCategory === category.id
-                ? "bg-gradient-to-r from-blue-800 to-purple-600 text-white shadow-lg shadow-blue-500/50 scale-105"
+                ? "bg-gradient-to-r from-blue-800 to-purple-950 text-white shadow-lg shadow-blue-900/50 scale-105"
                 : "bg-white/5 text-gray-300 hover:bg-white/10 hover:scale-105"
             }`}
           >

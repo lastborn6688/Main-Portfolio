@@ -12,7 +12,6 @@ const Navbar = () => {
     "Experience",
     "Projects",
     "Certification",
-    "Contact",
   ];
   return (
     <nav className="lg:h-20 h-15 sticky  flex items-center justify-between rounded-full top-5 lg:ml-[115px] ml-5 backdrop-blur-md bg-blue-600/10  lg:w-[85%] w-[90%] text-white px-6 md:px-12 lg:px-20 z-20">

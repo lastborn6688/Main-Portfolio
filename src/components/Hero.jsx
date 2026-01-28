@@ -9,7 +9,7 @@ const Hero = () => {
       id="Home"
     >
       <div className="w-[50%] flex flex-col justify-center items-start  mb-10 sm:mb-10 md:mb-0 lg:mb-0">
-        <h1 className="text-4xl items-start cormorant-font  sm:text-5xl bg-gradient-to-r bg-clip-text text-transparent  from-blue-400  via-purple-500 to-pink-600 gradient-animate md:text-6xl lg:text-6xl font-semibold mb-4">
+        <h1 className="text-4xl items-start inter  sm:text-5xl bg-gradient-to-r bg-clip-text text-transparent  from-blue-400  via-purple-500 to-pink-600 gradient-animate md:text-6xl lg:text-6xl font-semibold mb-4">
           Hello, <br className="block lg:hidden items-start " />
           I am Osi Matthew
         </h1>
@@ -27,7 +27,7 @@ const Hero = () => {
             }}
           />
         </div>
-        <p className=" text-lg sm:text-xl source-serif-4 mt-5 lg:ml-15 ml-0 text-blue-200 md:text-2xl lg:text-3xl mb-6">
+        <p className="cormorant-font text-lg sm:text-xl source-serif-4 mt-5 lg:ml-15 ml-0 text-blue-200 md:text-2xl lg:text-3xl mb-6">
           welcome to my portfolio
         </p>
       </div>
